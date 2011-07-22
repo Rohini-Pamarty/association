@@ -1,0 +1,12 @@
+<p><div style="background: #CFECEC"> Title</div> </p>
+<p><%= @article.title %></p>
+<p><div style="background: #CFECEC"> Description </div></p>
+<p><%= @article.description %></p>
+<h2>Comments</h2>
+<%= render :partial => "comments/show",
+	   :collection => @article.comments, :as => :comment %>
+<%= render :partial => 'comments/new'%> 
+
+
+<%#= link_to "add Comment", new_user_article_comment_path(:user_id => @article.user.id, :article_id => @article.id) %>
+<%= link_to "Back", articles_path %>

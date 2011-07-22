@@ -1,0 +1,6 @@
+<p> User Name </p>
+<p>user.username</p>
+<p> Email id </p>
+<p> user.emailid</p>
+<%= link_to "List articles", user_articles_path(:id => user.id) %>
+<%= link_to "Back", user_path %>

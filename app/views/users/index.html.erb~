@@ -1,0 +1,21 @@
+<table>
+	<tr>
+		<th>Username</th>
+		<th>Email Id</th>
+	</tr>
+
+	<tr>
+	<td><%= t.username %></td>
+	<td><%= t.emailid %> </td>
+	<td><%#= link_to "Show",t %></td>
+	<td><%#= link_to "Delete", users_path(:id => t.id), :method => :delete %></td>
+	</tr>
+<%= render :partial => 'articles/index', :locals => {:user => t} %>
+<%= link_to "New Article", new_user_article_path(t) %>
+
+</table>
+
+
+
+		
+

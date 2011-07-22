@@ -1,0 +1,21 @@
+
+
+
+<h2>List of articles </h2>
+<center>
+<% @user.articles.each do |t| %>
+
+<table>
+	<tr><td  width = "800px" ><%= link_to "#{t.title}", t, :user => @user %>&nbsp;&nbsp;&nbsp;&nbsp;<%= @user.username %>&nbsp;&nbsp;&nbsp;&nbsp;<%= (t.created_at).strftime("%Y-%m-%d %H:%M:%S")%></td></tr>
+	<tr bgcolor=#CFECEC><td  width = "900px"><%= truncate(t.description, :length =>120) %> </td></tr><br/>
+	
+	<tr><%#= link_to "Show",t %></tr><br/>
+	<tr><%#= link_to 'Destroy', t, :confirm => 'Are you sure?', :method => :delete %></tr>
+	
+</table>
+
+<% end %> 
+</center>
+</table>
+<br/>
+<%= link_to "New Article", new_user_article_path(@user) %>

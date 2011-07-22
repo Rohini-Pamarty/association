@@ -1,0 +1,18 @@
+<% form_for @user do |u| %>
+	<div>
+		<br/><br/>
+		<%= u.label :user_name %><br/>
+		<%= u.text_field :username %><br/>
+		<br/><br/>
+	</div>
+	<div>
+		<br/><br/>
+		<%= u.label :emailid %><br />
+		<%= u.text_field :emailid %><br />
+		<br/><br/>
+	</div>
+	<div>
+		<%= u.submit "Enter" %>
+	</div>
+
+<% end %>

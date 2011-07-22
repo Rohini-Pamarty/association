@@ -1,0 +1,12 @@
+<% form_for([@article, @article.comments]) do |a| %>
+	<div>
+		<br/><br/>
+		<%= a.label :review %><br/>
+		<%= a.text_field :review %><br/>
+		<br/><br/>
+	</div>
+	<div>
+		<%= a.submit "Enter Record" %>
+	</div>
+
+<% end %>

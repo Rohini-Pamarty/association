@@ -1,0 +1,18 @@
+<% form_for([@user,@article]) do |a| %>
+	<div>
+		<br/><br/>
+		<%= a.label :title %><br/>
+		<%= a.text_field :title %><br/>
+		<br/><br/>
+	</div>
+	<div>
+		<br/><br/>
+		<%= a.label :description %><br />
+		<%= a.text_field :description %><br />
+		<br/><br/>
+	</div>
+	<div>
+		<%= a.submit "Enter Record" %>
+	</div>
+
+<% end %>
