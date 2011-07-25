@@ -41,7 +41,7 @@ class Ckeditor::Asset < ActiveRecord::Base
   end
   
   def to_xml(options = {})
- 
+   def to_xml(options = {})
 	 	xml = options[:builder] ||= Builder::XmlMarkup.new(:indent => options[:indent])
  	
 	xml.tag!(self.type.to_s.downcase) do
@@ -55,8 +55,8 @@ class Ckeditor::Asset < ActiveRecord::Base
  	end
 	end unless self.styles.empty?
 		end
-		
-	 	
+		end
+	 	end
     
     builder.to_xml
   end

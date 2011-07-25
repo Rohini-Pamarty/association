@@ -4,6 +4,7 @@ class CreateArticles < ActiveRecord::Migration
 	t.references :user
 	t.string :title
 	t.string :description
+	t.string :permalink
       t.timestamps
     end
   end

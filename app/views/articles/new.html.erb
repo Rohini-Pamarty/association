@@ -1,4 +1,4 @@
-<% form_for([@user,@article]) do |a| %>
+<% form_for([@user,@article], :html => { :multipart => true }) do |a| %>
 	<div>
 		<br/><br/>
 		<%= a.label :title %><br/>
@@ -8,7 +8,9 @@
 	<div>
 		<br/><br/>
 		<%= a.label :description %><br />
-<%= a.cktext_area :description, :toolbar=>'Full', :width=>'950px', :height=>'200px' %>
+<%= a.cktext_area "description", :height => 200,:width => 950, :toolbar=>'Full' , :swf_params => { :assetable_type => 'AdminUser', :assetable_id => 1 } %>
+
+
 
 
 		

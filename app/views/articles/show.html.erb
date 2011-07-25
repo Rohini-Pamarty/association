@@ -1,7 +1,7 @@
 <p><div style="background: #CFECEC"> Title</div> </p>
 <p><%= @article.title %></p>
 <p><div style="background: #CFECEC"> Description </div></p>
-<p><%= @article.description %></p>
+<p><%= sanitize(@article.description) %></p>
 <h2>Comments</h2>
 <%= render :partial => "comments/show",
 	   :collection => @article.comments, :as => :comment %>

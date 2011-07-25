@@ -13,12 +13,12 @@ class ArticlesController < ApplicationController
 		end
 	end
 	def destroy
-		@article=Article.find(params[:id])
+		@article=Article.find_by_title(params[:id])
 		@article.destroy
 		redirect_to articles_path
 	end
 	def show
-		@article=Article.find(params[:id])
+		@article=Article.find_by_title(params[:id])
 	end
 	def index
 		@user=User.find(1)
