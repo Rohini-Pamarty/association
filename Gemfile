@@ -7,6 +7,7 @@ gem 'rails', '3.0.9'
 gem 'paperclip'
 gem "friendly_id", "~> 3.2.1.1"
 gem 'aws-s3'
+gem 'pg'
 
 
 gem 'sqlite3'
