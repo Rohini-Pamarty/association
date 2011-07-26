@@ -7,7 +7,11 @@
 
 <table>
 	<tr><td  width = "800px" ><%= link_to "#{t.title}", t, :user => @user %>&nbsp;&nbsp;&nbsp;&nbsp;<%= @user.username %>&nbsp;&nbsp;&nbsp;&nbsp;<%= (t.created_at).strftime("%Y-%m-%d")%></td></tr>
-	<tr bgcolor=#CFECEC><td  width = "900px"><%= sanitize(truncate(t.description, :length =>120)) %> </td></tr><br/>
+	<tr><td height="10px"></td></tr>
+	<tr bgcolor=#CFECEC><td  width = "900px"><%= sanitize(truncate(t.description, :length =>120)) %> </td></tr><br/><br/>
+	<tr><td height="12px"></td></tr>
+	<tr bgcolor=#CFECEC><td><center><%=  image_tag("#{t.picture(:thumb)}") %></td></center></tr>
+	<tr><td><center><%= link_to image_tag('/images/down.png', :style => "width:70px;height:40px;background: transparent"), t.document.url, {:style=>'color:#E3E4FA;', :class => "css_class"} %><br/><div style= "background: #CFECEC">FILE</div></center></td></tr>
 	
 	<tr><%#= link_to "Show",t %></tr><br/>
 	<tr><%#= link_to 'Destroy', t, :confirm => 'Are you sure?', :method => :delete %></tr>

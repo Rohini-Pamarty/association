@@ -2,6 +2,8 @@
 <p><%= @article.title %></p>
 <p><div style="background: #CFECEC"> Description </div></p>
 <p><%= sanitize(@article.description) %></p>
+<p>
+<%= image_tag(@article.picture.url(:medium)) %></p>
 <h2>Comments</h2>
 <%= render :partial => "comments/show",
 	   :collection => @article.comments, :as => :comment %>

@@ -9,13 +9,19 @@
 		<br/><br/>
 		<%= a.label :description %><br />
 <%= a.cktext_area "description", :height => 200,:width => 950, :toolbar=>'Full' , :swf_params => { :assetable_type => 'AdminUser', :assetable_id => 1 } %>
-
-
-
-
-		
 		<br/><br/>
 	</div>
+<div>
+   		 <%= a.label :Image %><br />
+    		 <%= a.file_field :picture %>
+<br/><br/>
+
+  </div>
+<br/><br/>
+<div>
+	<%= a.label :document %><br/>
+	<%= a.file_field :document %>
+</div>
 	<div>
 		<%= a.submit "Enter Record" %>
 	</div>

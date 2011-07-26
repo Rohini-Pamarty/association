@@ -3,5 +3,7 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 Association::Application.initialize!
+config.gem "aws-s3", :lib => "aws/s3" 
 
-config.gem 'paperclip', :source => 'http://rubygems.org'
+
+

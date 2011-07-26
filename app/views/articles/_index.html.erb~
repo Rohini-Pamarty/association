@@ -5,10 +5,11 @@
 		<th>Description</th>
 	</tr>
 <h2>List of articles </h2>
-<% user.articles.each do |t| %>
+<% @user.articles.each do |t| %>
 	<tr>
 	<td><%= t.title %></td>
 	<td><%= t.description %> </td>
+	<td><%= t.image(picture) %></td>
 	<td><%= link_to "Show",t %></td>
 	<td><%= link_to 'Destroy', t, :confirm => 'Are you sure?', :method => :delete %></td>
 	</tr>
