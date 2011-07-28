@@ -2,3 +2,11 @@ development:
  bucket: sharmanyros
  access_key_id: AKIAJG7Y5HIWYXB6EMGQ
  secret_access_key: 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
+production:
+ bucket: sharmanyros
+ access_key_id: AKIAJG7Y5HIWYXB6EMGQ
+ secret_access_key: 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
+test:
+ bucket: sharmanyros
+ access_key_id: AKIAJG7Y5HIWYXB6EMGQ
+ secret_access_key: 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
